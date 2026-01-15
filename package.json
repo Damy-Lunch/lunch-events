@@ -1,0 +1,23 @@
+{
+  "name": "@lunch-app/events",
+  "version": "1.0.0",
+  "description": "Shared event contracts for lunch-app microservices",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "lunch-app",
+    "events",
+    "contracts"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}
