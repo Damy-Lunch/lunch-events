@@ -32,13 +32,16 @@ export interface InviteReceivedEvent {
 
 /**
  * Invite approved event - emitted by matching-service
+ * For match acceptance: recipientId is the liker who gets notified their like was accepted
+ * For group invites: groupId and groupName identify the group
  */
 export interface InviteApprovedEvent {
   eventType: 'invite.approved';
   inviteId: string;
   recipientId: string;
-  groupId: string;
-  groupName: string;
+  approverName: string;
+  groupId?: string;
+  groupName?: string;
   createdAt: string;
 }
 
