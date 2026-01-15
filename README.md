@@ -1,12 +1,17 @@
-# @lunch-app/events
+# @damy-lunch/events
 
-Shared event contracts for lunch-app microservices.
+Shared event contracts for Damy Lunch microservices.
 
 ## Installation
 
 ```bash
-# Using git dependency
-npm install git+https://github.com/yourorg/lunch-events.git#v1.0.0
+npm install @damy-lunch/events
+```
+
+**Note:** Requires `.npmrc` configuration for GitHub Packages:
+```
+@damy-lunch:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
 ```
 
 ## Usage
@@ -18,7 +23,7 @@ import {
   NOTIFICATION_QUEUE,
   NOTIFICATION_PATTERNS,
   MatchCreatedEvent,
-} from '@lunch-app/events';
+} from '@damy-lunch/events';
 
 // Configure RabbitMQ client to use NOTIFICATION_QUEUE
 ClientsModule.register([{
@@ -51,7 +56,7 @@ this.notificationClient.emit(NOTIFICATION_PATTERNS.MATCH_CREATED, event);
 import {
   NOTIFICATION_PATTERNS,
   MatchCreatedEvent,
-} from '@lunch-app/events';
+} from '@damy-lunch/events';
 
 @EventPattern(NOTIFICATION_PATTERNS.MATCH_CREATED)
 async handleMatchCreated(@Payload() event: MatchCreatedEvent) {
@@ -68,6 +73,16 @@ async handleMatchCreated(@Payload() event: MatchCreatedEvent) {
 | `invite.approved`            | `InviteApprovedEvent`| matching-service |
 | `conversation.member.joined` | `MemberJoinedEvent`  | matching-service |
 | `message.created`            | `MessageCreatedEvent`| chat-service     |
+
+## Publishing to GitHub Packages
+
+```bash
+# Login to GitHub Packages
+npm login --registry=https://npm.pkg.github.com
+
+# Publish
+npm publish
+```
 
 ## Versioning
 

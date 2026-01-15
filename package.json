@@ -1,7 +1,7 @@
 {
-  "name": "@lunch-app/events",
+  "name": "@damy-lunch/events",
   "version": "1.0.0",
-  "description": "Shared event contracts for lunch-app microservices",
+  "description": "Shared event contracts for Damy Lunch microservices",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,8 +11,15 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Damy-Lunch/lunch-events.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "keywords": [
-    "lunch-app",
+    "damy-lunch",
     "events",
     "contracts"
   ],
