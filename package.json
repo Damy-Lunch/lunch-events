@@ -1,5 +1,5 @@
 {
-  "name": "damy-lunch-events",
+  "name": "@lunch-app/events",
   "version": "1.0.4",
   "description": "Shared event contracts for Damy Lunch microservices",
   "main": "dist/index.js",
