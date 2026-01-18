@@ -1,5 +1,5 @@
 {
-  "name": "@lunch-app/events",
+  "name": "@damy-lunch/events",
   "version": "1.0.4",
   "description": "Shared event contracts for Damy Lunch microservices",
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
     "url": "https://github.com/Damy-Lunch/lunch-events.git"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "damy-lunch",
