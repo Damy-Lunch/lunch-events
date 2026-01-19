@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run build"
   },
   "repository": {
@@ -24,7 +25,7 @@
     "contracts"
   ],
   "license": "UNLICENSED",
-  "devDependencies": {
+  "dependencies": {
     "typescript": "^5.1.3"
   }
 }
